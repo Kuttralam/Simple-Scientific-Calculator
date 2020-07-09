@@ -301,6 +301,7 @@ public class MainActivity extends AppCompatActivity {
                     signs = null;
                     sign.setText(null);
                     break;
+                    
                 case "factorial":
                     value1 = input.getText().toString();
                     num1 = Double.parseDouble((value1));
