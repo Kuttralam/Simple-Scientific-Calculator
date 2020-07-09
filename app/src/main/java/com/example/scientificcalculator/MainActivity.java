@@ -208,6 +208,15 @@ public class MainActivity extends AppCompatActivity {
         input.setText(input.getText() + "0");
     }
 
+    public void power10(View view)
+    {
+        signs = "power10";
+        value1 = input.getText().toString();
+        input.setText(null);
+        dots = false;
+        sign.setText("10ⁿ");
+    }
+
     public void dot(View view)
     {
         if (!dots)
@@ -276,6 +285,14 @@ public class MainActivity extends AppCompatActivity {
                         sign.setText(null);
                         break;
                     }
+
+                case "power10":
+                    value1 = input.getText().toString();
+                    num1 = Double.parseDouble((value1));
+                    input.setText(Math.pow(10, num1) + "");
+                    signs = null;
+                    sign.setText(null);
+                    break;
 
                 case "root":
                     value1 = input.getText().toString();
@@ -359,4 +376,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+
 }
